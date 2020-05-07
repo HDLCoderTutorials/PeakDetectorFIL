@@ -1,0 +1,59 @@
+
+# Vim temp files
+*.swp
+
+# Windows default autosave extension
+*.asv
+
+# OSX / *nix default autosave extension
+*.m~
+
+# Compiled MEX binaries (all platforms)
+*.mex*
+
+# Packaged app and toolbox files
+*.mlappinstall
+*.mltbx
+
+# Generated helpsearch folders
+helpsearch*/
+
+# Simulink code generation folders
+slprj/
+sccprj/
+
+# Matlab code generation folders
+codegen/
+
+# Simulink autosave extension
+*.autosave
+
+# Simulink cache files
+*.slxc
+
+# Octave session info
+octave-workspace
+
+# HDL hode generation folders
+# Note: These may actually be valuable, since synthesis takes about 20 minutes.
+hdl_prj/
+
+# Begin excluding system_wrapper.bit from gitignore, so LFS can manage it.
+# Reverse the above as it applies to the system_wrapper.bit
+# at hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_wrapper.bit
+!hdl_prj/
+#-
+hdl_prj/*
+!hdl_prj/vivado_ip_prj/
+#-
+hdl_prj/vivado_ip_prj/*
+!hdl_prj/vivado_ip_prj/vivado_prj.runs/
+#-
+hdl_prj/vivado_ip_prj/vivado_prj.runs/*
+!hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/
+#-
+hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/*
+!hdl_prj/vivado_ip_prj/vivado_prj.runs/impl_1/system_wrapper.bit
+# Done excluding system_wrapper.bit from gitignore, so LFS can manage it.
+# Log generated when Xilinx RFTool is used to setup the RFSoC
+RFTool_Log.txt
